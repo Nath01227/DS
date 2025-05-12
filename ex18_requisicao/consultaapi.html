@@ -50,14 +50,56 @@
                     let population = document.createElement('p');
                     population.innerText = country.population;
 
+                    let maps = document.createElement('a');
+                    maps.setAttribute('href', country.maps.googleMaps);
+                    maps.innerText = 'Mapa'
+
+                    let continents = document.createElement('h6');
+                    continents.innerText = country.continents;
+
+                    let region = document.createElement('h6');
+                    region.innerText = country.region;
+                    
+                    let subregion = document.createElement('h6');
+                    subregion.innerText = country.subregion;  
+
+                    let independent = document.createElement('h6')
+                    independent.innerText = country.independent;
+
+                    if(country.independent = true){
+                        independent.innerText = 'Pais Independente'
+                    } else{
+                        independent.innerText = 'Pais Dependente';
+                    }
+
+                    let border = document.createElement('h6');
+                    border.innerText = country.borders;
+                    border.style.wordBreak = "break-word";
+
+                    let timezone = document.createElement('h6');
+                    timezone.innerText = country.timezones;
+
+                    let coatOfArms = document.createElement('img');
+                    coatOfArms.setAttribute('src', country.coatOfArms.svg);
+                    coatOfArms.style.width = '80%'
+
+
                     let col = document.createElement('div');
                     col.classList.add("col-3");
             
                     col.appendChild(img);
                     col.appendChild(title);
                     col.appendChild(subtitle);
+                    col.appendChild(continents);
+                    col.appendChild(region);
+                    col.appendChild(subregion);
                     col.appendChild(capital);
                     col.appendChild(population);
+                    col.appendChild(independent);
+                    col.appendChild(border);
+                    col.appendChild(timezone);
+                    col.appendChild(maps);
+                    col.appendChild(coatOfArms);
                     countries_list.appendChild(col);
 
                 });
