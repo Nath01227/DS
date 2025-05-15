@@ -76,13 +76,21 @@
                     border.innerText = country.borders;
                     border.style.wordBreak = "break-word";
 
+                    let languages = document.createElement('h6');
+                    languages.innerText = Object.keys(country.languages);
+
                     let timezone = document.createElement('h6');
                     timezone.innerText = country.timezones;
 
+                    let fifa = document.createElement('h6');
+                    fifa.innerText = country.fifa;
+
+                    let status = document.createElement('h6');
+                    status.innerText = country.status;
+
                     let coatOfArms = document.createElement('img');
                     coatOfArms.setAttribute('src', country.coatOfArms.svg);
-                    coatOfArms.style.width = '80%'
-
+                    coatOfArms.style.width = '100%'
 
                     let col = document.createElement('div');
                     col.classList.add("col-3");
@@ -95,11 +103,14 @@
                     col.appendChild(subregion);
                     col.appendChild(capital);
                     col.appendChild(population);
+                    col.appendChild(languages);
+                    col.appendChild(status);
+                    col.appendChild(fifa);
                     col.appendChild(independent);
                     col.appendChild(border);
                     col.appendChild(timezone);
-                    col.appendChild(maps);
                     col.appendChild(coatOfArms);
+                    col.appendChild(maps);
                     countries_list.appendChild(col);
 
                 });
