@@ -1,0 +1,87 @@
+<script>
+
+    class Veiculo {
+        constructor(marca, modelo){
+            this.marca = marca;
+            this.modelo = modelo;
+        }
+
+        acelerar(){
+            console.log(`${this.modelo} acelerou!`);
+        }
+
+        frear(){
+            console.log(`${this.modelo} freou!`);
+        }
+    }
+
+
+    let veiculo_1 = new Veiculo('Fiat', 'Uno 1994');
+    console.log(`Seu veículo é ${veiculo_1.modelo}`);
+    veiculo_1.acelerar();
+    veiculo_2.frear();
+
+    console.log(veiculo_1);
+
+    class Pessoa {
+        constructor(nome, cpf, idade, telefone){
+            this.nome = nome;
+            this.cpf = cpf;
+            this.idade = idade;
+            this.telefone= telefone;
+        }
+        
+        correr(){
+            console.log(` A pessoa correu!!`);
+        }
+
+        pular(){
+            console.log(`A pessoa pulou!!`);
+        }
+
+        falar(){
+            console.log(`A pessoa disse olá!!`);
+        }
+    }
+
+    let pessoa = new Pessoa('Nathália', '534', '16', '123');
+    pessoa.correr();
+    pessoa.pular();
+    pessoa.falar();
+
+    class Animal {
+        constructor(nome, raça, idade, tipo){
+            this.nome = nome;
+            this.raca = raca;
+            this.idade = idade;
+            this.tipo = tipo;
+        }
+
+        comer(){
+            console.log(`O animal comeu!!`);
+        }
+
+        dormir(){
+            console.log(`O animal dormiu!!`);
+        }
+
+        brincar(){
+            console.log(`O animal esta brincando!!`);
+        }
+    }
+
+    let Animal = new Animal('Lua', 'salsicha', '2 anos', 'cachorro')
+    animal.comer
+    animal.dormir
+    animal.brincar
+
+    class Cachorro extends Animal {
+        constructor(nome, peso, altura){
+            super(nome, peso, altura);
+            this.altura = altura;
+        }
+        latir(){
+            console,log('Cachorro latiu!!.');
+        }
+    }
+</script>
